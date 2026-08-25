@@ -62,7 +62,7 @@ Respond with JSON only, no prose, no code fences, in exactly this shape:
 const gradeSchema = z.object({
   correct: z.boolean(),
   feedback: z.string(),
-  hint: z.string().default(""),
+  hint: z.string().optional().transform((v) => v ?? ""),
 });
 
 export async function gradeAttempt(input: {
