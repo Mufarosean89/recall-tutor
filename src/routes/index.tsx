@@ -52,7 +52,7 @@ function Tutor() {
   const [answer, setAnswer] = useState("");
   const [attempt, setAttempt] = useState(1);
   const [grading, setGrading] = useState(false);
-  const [feedback, setFeedback] = useState<{ correct: boolean; feedback: string; hint: string } | null>(null);
+  const [feedback, setFeedback] = useState<{ correct: boolean; feedback: string; hint?: string } | null>(null);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const locked = checkpoint !== null || buildingGate;
