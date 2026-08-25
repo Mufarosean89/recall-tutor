@@ -8,16 +8,6 @@ Under the hood it's built entirely on open-source infrastructure: an open-source
 
 The result is a tutor that keeps the parts of LLM-assisted learning that work (patient, on-demand, personalized explanation) while removing the part that quietly undermines learning (never having to retrieve anything yourself).
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9a220dc6-1b6f-49c1-8754-5a8849b6581d).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
 ## Development
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).

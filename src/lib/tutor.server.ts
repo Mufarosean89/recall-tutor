@@ -1,12 +1,13 @@
 import { generateText } from "ai";
 import { z } from "zod";
-import { createLovableAiGatewayProvider, requireGatewayKey } from "./ai-gateway.server";
+import { createOpenAICompatibleProvider, requireGatewayKey } from "./ai-gateway.server";
 import type { ChatTurn } from "./tutor.shared";
 
 const MODEL = "google/gemini-3.7-flash";
+const BASE_URL = process.env["AI_BASE_URL"] ?? "https://ai.gateway.openai.com/v1";
 
 function model() {
-  return createLovableAiGatewayProvider(requireGatewayKey())(MODEL);
+  return createOpenAICompatibleProvider(requireGatewayKey(), BASE_URL)(MODEL);
 }
 
 function parseJson<T>(raw: string, schema: z.ZodType<T>): T {
